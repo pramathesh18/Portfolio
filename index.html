@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pramathesh — Portfolio</title>
+
+  <!-- Satoshi Font -->
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a data-scroll="projects">Projects</a>
+    <a data-scroll="education">Education</a>
+    <a data-scroll="contact">Contact Me</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hello.<br>I am<br>Pramathesh</h1>
+
+      <div class="subheading">
+        Developer <span class="dot"></span> Student
+      </div>
+
+      <div class="descriptor">
+        MINIMAL · CREATIVE
+      </div>
+    </div>
+
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>ABOUT ME</h2>
+    <p>
+      I am a developer and computer science student focused on building clean,
+      efficient, and scalable web applications. I enjoy transforming ideas into
+      practical digital products with strong performance and clarity.
+    </p>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="tech">
+    <div class="tech-divider">
+      <span>TECH STACK</span>
+    </div>
+
+    <div class="tech-logos">
+      <span>React</span>
+      <span>Next.js</span>
+      <span>Tailwind</span>
+      <span>Node.js</span>
+      <span>TypeScript</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h2>PROJECTS</h2>
+
+    <div class="project-row">
+      <div class="project-card">
+        <h3>Modern Portfolio</h3>
+        <p>Responsive personal portfolio with smooth interactions.</p>
+        <span class="arrow">→</span>
+      </div>
+
+      <div class="project-card">
+        <h3>E-Commerce Platform</h3>
+        <p>Full-stack store with clean UI and strong backend logic.</p>
+        <span class="arrow">→</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Task Management App</h3>
+        <p>Minimal productivity app focused on clarity.</p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <h2>EDUCATION</h2>
+    <div class="edu-item">
+      <h3>B.Tech — Computer Science</h3>
+      <p>XYZ University · 2022 – Present</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>CONTACT ME</h2>
+    <p>Email: pramathesh@example.com</p>
+    <p>GitHub: github.com/pramathesh18</p>
+    <p>LinkedIn: linkedin.com/in/pramathesh</p>
+  </section>
+
+  <!-- SMOOTH SCROLL (NO URL CHANGE) -->
+  <script>
+    document.querySelectorAll('nav a[data-scroll]').forEach(link => {
+      link.addEventListener('click', () => {
+        const target = document.getElementById(link.dataset.scroll);
+        if (!target) return;
+
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
