@@ -82,6 +82,7 @@ a:focus-visible {
   margin: 0 10px;
 }
 
+
 /* LAYOUT */
 .container {
   max-width: 1100px;
@@ -105,6 +106,11 @@ a:focus-visible {
   font-size: 14px;
   opacity: 0.85;
 }
+.nav a.active {
+  opacity: 1;
+  color: var(--red);
+}
+
 
 .nav a:hover {
   opacity: 1;
@@ -243,7 +249,7 @@ a:focus-visible {
 .project-image img {
   width: 100%;
   display: block;
-  filter: grayscale(100%);
+
   transition: transform 0.3s ease;
 }
 

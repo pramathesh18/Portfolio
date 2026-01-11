@@ -21,11 +21,36 @@ function qsa(selector, scope = document) {
    (active state, future scroll spy)
 ================================ */
 function initNavigation() {
-  const navLinks = qsa('.nav a');
+  const navLinks = document.querySelectorAll('.nav a');
 
-  // Placeholder for future logic
-  // Example: active link on scroll
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href');
+      if (!targetId.startsWith('#')) return;
+
+      e.preventDefault();
+
+      const section = document.querySelector(targetId);
+      if (!section) return;
+
+      section.scrollIntoView({ behavior: 'smooth' });
+
+      // set active state
+      navLinks.forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+
+      history.replaceState(null, '', targetId);
+    });
+  });
 }
+
+function setActiveLink(id) {
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === id);
+  });
+}
+
+
 
 /* ================================
    Page Init
