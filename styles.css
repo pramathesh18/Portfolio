@@ -173,7 +173,7 @@ a:focus-visible {
   background-image: url("./assets/images/portrait.png");
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
+
   z-index: 1;
 }
 
